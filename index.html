@@ -10,7 +10,7 @@
     <h1>JavaScript Week 4</h1>
 
     <div class="lesson">
-        <h3>Lesson 1: Show text on page</h3>
+        <h2>Lesson 1: Show text on page</h2>
 
         <h2 id="heading1">Hello</h2>
         <p id="text1">World</p>
@@ -23,5 +23,27 @@
             }
         </script>
     </div>
+
+    <!-- Lesson 2 -->
+
+    <div class="lesson">
+        <h2>Lesson 2: Variables (Text Storage)</h2>
+
+        <h2 id="heading2">Text will change</h2>
+        <p id="text2">More text here</p>
+        <button onclick="lesson2()">Use Variables</button>
+
+        <script>
+            function lesson2() {
+                var message1 = "Hello everyone!";
+                var message2 = "I love JavaScript!";
+                var message3 = "It's awesome";
+
+                document.getElementById("heading2").innerHTML = message1;
+                document.getElementById("text2").innerHTML = message2 + " " + message3;
+            }
+        </script>
+    </div>
+
 </body>
 </html>
