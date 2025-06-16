@@ -45,5 +45,22 @@
         </script>
     </div>
 
+    <!-- Lesson 3 -->
+
+    <div class="lesson">
+        <h2>Lesson 3: Variables Part 2</h2>
+
+        <p id="math">Math Equation will show up here</p>
+        <button onclick="lesson3()">Do Math</button>
+
+        <script>
+            function lesson3() {
+                var num1 = 7;
+                var num2 = 10;
+
+                document.getElementById("math").innerHTML = num1 + " x " + num2 + " = " + (num1 * num2);
+            }
+        </script>
+    </div>
 </body>
 </html>
