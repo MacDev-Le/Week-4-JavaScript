@@ -62,5 +62,29 @@
             }
         </script>
     </div>
+
+    <!-- Lesson 4 -->
+
+    <div class="lesson">
+        <h2>Lesson 4: Conditionals (if/Else Decisions)</h2>
+
+        <input type="password" id="password" placeholder="Try: 007">
+        <button onclick="lesson4()">Check Password</button>
+        <div class="result" id="result4">Enter Password and click</div>
+
+        <script>
+            function lesson4() {
+            var userPassword = document.getElementById("password").value;
+
+            if (userPassword == "007") {
+                // Text if correct
+                document.getElementById("result4").innerHTML = "Correct password. You are logged in!";
+            } else {
+                // Text if incorrect
+                document.getElementById("result4").innerHTML = "Incorrect password! Please try again";
+            }}
+
+        </script>
+    </div>
 </body>
 </html>
