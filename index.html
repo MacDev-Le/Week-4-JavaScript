@@ -188,7 +188,7 @@
         <h2>Lesson 10: Mini Project: Login Form Part 1</h2>
         <P><strong>Concept:</strong>Getting user input from form elements</P>
 
-        <form action="">
+        <form>
             <label for="usernameInput10">Username:</label>
             <input type="text" id="usernameInput10" placeholder="Email / Cell Number"/> <br><br>
 
@@ -204,13 +204,50 @@
         <script>
             function verifyUser10() {
                 var username = document.getElementById("usernameInput10").value;
-                var password =  document.getElementById("passwordInput10").value;
+                var password = document.getElementById("passwordInput10").value;
 
                 document.getElementById("message10").innerHTML = "Username entered: " + username + "<br>Password entered: " + password;
             }
         </script>
 
       </div>
+
+      <!-- Lesson 11 -->
+       <div class="lesson">
+        <h2>Lesson 11 - Mini Project: Login Form Part 2</h2>
+        <p><strong>Concept:</strong>Complete login verification with functions and conditionals</p>
+        <p><em>Try username: Ler, password: 083</em></p>
+
+        <form>
+            <label for="usernameInput11">Username</label>
+            <input type="text" id="usernameInput11" placeholder="Name..."/> <br><br>
+
+            <label for="passwordInput11">Password</label>
+            <input type="password" id="passwordInput11"/> <br><br>
+
+            <button type="button" onclick="verifyUser11()">Login</button>
+
+        </form>
+       <div class="output" id="message11">Enter credentials and click Login</div>
+
+       <script>
+            function verifyUser11() {
+                var username = document.getElementById("usernameInput11").value;
+                var password = document.getElementById("passwordInput11").value;
+                checkUserCreds(username, password);
+            }
+
+            function checkUserCreds(username, password) {
+                var adminUsername = "LeratoN";
+                var adminPassword = "083@MacD";
+
+                if (username == adminUsername && password == adminPassword) {
+                    document.getElementById("message11").innerHTML = "Correct. Logging you in...";
+                } else {
+                    document.getElementById("message11").innerHTML = "Username or password is incorrect";
+                }
+            }
+       </script>
 
 </body>
 </html>
