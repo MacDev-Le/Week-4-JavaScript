@@ -31,6 +31,7 @@
 
         <h2 id="heading2">Text will change</h2>
         <p id="text2">More text here</p>
+        <p id="text2.1">Another text here</p>
         <button onclick="lesson2()">Use Variables</button>
 
         <script>
@@ -40,7 +41,8 @@
                 var message3 = "It's awesome";
 
                 document.getElementById("heading2").innerHTML = message1;
-                document.getElementById("text2").innerHTML = message2 + " " + message3;
+                document.getElementById("text2").innerHTML = message2;
+                document.getElementById("text2.1").innerHTML = message3;
             }
         </script>
     </div>
@@ -111,7 +113,7 @@
                 if (toggle.innerHTML == "JavaScript") {
                     toggle.innerHTML = "is awesome";
                 } else {
-                    toggle.innerHTML = "JavaScript";
+                     toggle.innerHTML = "JavaScript";
                 }
             }
         </script>
@@ -166,10 +168,10 @@
         <div class="output" id="scopeOutput">Click button to see variable scope in action</div>
 
         <script>
-            var globalVariable = "I'm a global variable";
+            var globalVariable = "I'm a global variable"; // Global variable if it is outside of a specific function.
 
             function demonstrateScope() {
-                var localVariable = "I'm a local variable";
+                var localVariable = "I'm a local variable"; // Local variable exist inside a function
                 document.getElementById("scopeOutput").innerHTML = 
                 "Global: " + globalVariable + "<br>" +
                 "Local: " + localVariable + "<br>" +
@@ -241,7 +243,7 @@
                 var adminUsername = "LeratoN";
                 var adminPassword = "083@MacD";
 
-                if (username == adminUsername && password == adminPassword) {
+                if (username == adminUsername && password == adminPassword) { // Meet both requirements
                     document.getElementById("message11").innerHTML = "Correct. Logging you in...";
                 } else {
                     document.getElementById("message11").innerHTML = "Username or password is incorrect";
@@ -314,7 +316,7 @@
                     var numberA = 5;
                     var numberB = 3;
                     var stringA = "5";
-                    var stringB = "3";
+                    var stringB = "K";
 
                     document.getElementById("stringNumberOutput").innerHTML = 
                         "Number addition: " + numberA + " + " + numberB + " = " + (numberA + numberB) + "<br>" +
@@ -379,7 +381,7 @@
 
                     var num1 = parseInt(input1);
                     var num2 = parseInt(input2);
-                    //Checks if a value is a number (is Not a Number) || = or
+                    //Checks if a value is a number (is Not a Number) "||" = OR
 
                     if (isNaN(num1) || isNaN(num2)) {
                         document.getElementById("safeOutput").innerHTML = "Error: Please enter valid numbers only!<br>";
